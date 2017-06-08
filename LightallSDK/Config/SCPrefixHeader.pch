@@ -1,0 +1,65 @@
+//
+//  SCPrefixHeader.pch
+//  callShow
+//
+//  Created by river on 2017/3/24.
+//  Copyright © 2017年 richinfo. All rights reserved.
+//
+
+#ifndef SCPrefixHeader_pch
+#define SCPrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "SCSDKHeader.h"
+#import "HKHEncryptHelper.h"
+
+#import "HKHFileHelper.h"
+#import "HKHNetworkHelper.h"
+#import "TDEntity.h"
+
+#import "NSFileManager+TD.h"
+#import "NSString+HKH.h"
+#import "NSString+PhoneNumber.h"
+#import "TD_MJExtension.h"
+
+#import "SCModel.h"
+#import "SCVersionModel.h"
+#import "SCPhoneNumber.h"
+
+
+
+#endif
+
+//-----------------文件目录-------------------
+#define SCSDK                       @"SCSDK"
+// 文件缓存目录名称(Apple固定名称)
+#define SC_CACHES                       @"Caches"
+
+#define CachePath [(NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES))objectAtIndex:0]
+//缓存目录
+#define CacheVersionDataPath [CachePath stringByAppendingPathComponent:kNumVersionDatafolder]
+
+#define TD_USER_DBNAME  @"strangernum.db"
+
+
+#define  kNumVersionDatafolder      @"test-master"
+#define  kNumVersionDataVersionflie        @"updateconfig.plist"
+#define  kNumDataVersionflie        @"phonec.plist"
+#define  kNumVersionDataHost        @"https://codeload.github.com/huangkunhe/test/zip/master"
+
+#define  kNumVersionDataHostC       @"kNumVersionDataHost"
+#define  kNumVersionDataGroupC       @"kNumVersionDataGroup"
+
+
+#define  kErrorMessage      @"请检查网络配置，稍后再试"
+
+#define  kBlackList    @"BlackList"
+#define  kMrakList     @"MrakList"
+#define  kMY    @"MY"
+
+
+
+#endif /* SCPrefixHeader_pch */
